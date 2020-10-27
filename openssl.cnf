@@ -1,0 +1,26 @@
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+
+[req_distinguished_name]
+countryName = GB
+countryName_default = GB
+stateOrProvinceName = London
+stateOrProvinceName_default = London
+localityName = 
+localityName_default = 
+organizationalUnitName = Zones (UK) LTD
+organizationalUnitName_default = Zones (UK) LTD
+commonName = uk.zones.com.glasswall-icap.com
+commonName_default = uk.zones.com.glasswall-icap.com
+commonName_max = 64
+
+[ v3_req ]
+# Extensions to add to a certificate request
+#basicConstraints = CA:FALSE
+keyUsage = critical, digitalSignature, keyAgreement
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = uk.zones.com.glasswall-icap.com
